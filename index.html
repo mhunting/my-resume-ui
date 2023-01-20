@@ -1,0 +1,393 @@
+<html lang="en">
+
+<head>
+    <style type="text/css">
+        /* Global Styles
+====================*/
+
+        html {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+        }
+
+        a {
+            color: #EF233c;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2 {
+            font-family: 'Artifika', serif;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            font-size: 25px;
+            margin-top: 0;
+        }
+
+        h3 {
+            margin: 0;
+        }
+
+        nav {
+            z-index: 999;
+        }
+        .content-wrap {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 60px 50px;
+            overflow: hidden;
+            ;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        .justified {
+            text-align: justify;
+        }
+
+        .btn {
+            text-decoration: none;
+            background: #EF2336;
+            color: #fff;
+            padding: 10px;
+            display: inline-block;
+            cursor:pointer;
+        }
+
+        .download {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+
+        /* Header Styles and footer
+====================*/
+        header,
+        footer {
+            background-color: #2B2D42;
+            color: #8D99AE;
+        }
+
+        /* Header styles  */
+
+        header {
+            padding-top: 50px;
+            position: relative;
+        }
+
+        nav {
+            text-align: center;
+            background-color: #fff;
+            position: fixed;
+            /* if you dont set a width for a positioned element, it will only be as wide as its content*/
+            top: 0;
+            width: 100%;
+            /*Can also be achieved by setting left: 0 and right:0 */
+            /*left: 0;
+  right: 0;*/
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+
+        }
+
+        header h1,
+        header h2 {
+            color: #EDF2F4;
+            margin: 0;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+        }
+
+
+        /* Footer styles */
+        footer {
+            text-align: center;
+        }
+
+        .contact-info a {
+            padding: 10px;
+            display: inline-block;
+        }
+
+
+        /* Education Styles
+====================*/
+        .education {
+            background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
+                url(http://freelinkedinbackgrounds.com/wp-content/uploads/2015/01/Technology-008.jpg) no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        p+h3 {
+            margin-top: 30px;
+        }
+
+        /* Work Experience Styles
+====================*/
+
+        .work {
+            background-color: #EDF2F4
+        }
+
+        h3~p {
+            margin: 0;
+        }
+
+        .job-description p:first-of-type {
+            margin-top: 20px;
+        }
+
+        .job-decription {
+            margin-bottom: 15px;
+          
+        }
+
+        .job-history {
+            display: inline-block;
+            padding-top: 10px;
+        }
+
+        /* Media Querie */
+        @media (min-width: 900px) {
+            .col-narrow {
+                width: 35%;
+                float: left;
+            }
+
+            .col-wide {
+                width: 62%;
+                float: right;
+                padding-left: 20px;
+            }
+        }
+
+        @media (max-width:899px) {
+            header {
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 200px;
+            }
+        }
+    </style>
+
+    <script src="https://use.fontawesome.com/59a8f26532.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michael Hunting | Resume</title>
+    <link href="https://fonts.googleapis.com/css?family=Artifika|Open+Sans" rel="stylesheet">
+ 
+</head>
+
+<body>
+    <!-- // Intro -->
+    <header id="about">
+        <!--Putting the download link before the navbar make it appear below the navbar on the page stack  -->
+        <a class="btn download" onclick="html2pdf().set({            
+            filename:     'michael-hunting.pdf',                 
+          }).from(document.body).save();">Download</a>
+        <nav>
+            <a href="#about" title="">About</a>
+            <a href="#work" title="">Work Experience</a>
+            <a href="#education" title="">Education</a>
+            <a href="#contact" title="">Contact</a>
+        </nav>
+        <div class="content-wrap">
+            <img class="profile-img col-narrow" src="./resume.jpg">
+            <!-- Use a square profile image to get max effect of 50% border radius -->
+            <div class="col-wide">
+                <h1>Michael Hunting</h1>
+                <h2>Software Engineer</h2>
+                <p>Things I love most about my job</p>
+                <p>
+                <ul>
+                    <li>working with my team to tackle complex issues</li>
+                    <li>focusing on observability and performance</li>
+                    <li>automating quality into the process of shipping software</li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- // Work Experience -->
+        <section id="work" class="work">
+            <div class="content-wrap">
+
+                <h2>Work Experience</h2>
+
+                <!-- Job Details: copy this whole block to add more jobs -->
+
+                <div class="job-history">
+                    <div class="col-narrow">
+                        <h3>Cox Automotive</h3>
+                        <p class="uppercase">Lead Software Engineer</p>
+                        <p>Feb 2019 - PRESENT</p>
+                    </div>
+                    <div class="col-wide job-description">
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">Worked on DevOps Enablement team creating services to help delivery teams
+                            build, deploy and monitor applications in AWS. Worked with Cloudwatch, Newrelic (nrql, apm,
+                            dashboards), Splunk, Cloudability and Terraform.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- end of Job Details block. -->
+
+                <!-- Job Details: copy this whole block to add more jobs -->
+                <div class="job-history">
+                    <div class="col-narrow">
+                        <h3>DirectScale</h3>
+                        <p class="uppercase">Senior Software Engineer</p>
+                        <p>Jul 2017 - Feb 2019</p>
+                    </div>
+                    <div class="col-wide job-description">
+
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">Worked on optimizing runtime and memory consumption for a backend
+                            commission engine. Increased testability and stability of the existing code. </p>
+                    </div>
+                </div>
+                <!-- end of Job Details block. -->
+  
+                <!-- Job Details: copy this whole block to add more jobs -->
+                <div class="job-history">
+                    <div class="col-narrow">
+                        <h3>Cox Automotive</h3>
+                        <p class="uppercase">Senior Software Engineer</p>
+                        <p>Dec 2014 - Jul 2017</p>
+                    </div>
+                    <div class="col-wide job-description">
+
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">Created Business Intelligence dashboards for car dealerships in
+                            Angular/Typescript. Created complex SQL queries to extract data for rest APIs. Build
+                            automation and CI in Jenkins.</p>
+
+                    </div>
+                </div>
+                <!-- end of Job Details block. -->
+
+                <!-- Job Details: copy this whole block to add more jobs -->
+                <div class="job-history">
+                    <div class="col-narrow">
+                        <h3>1800Contacts</h3>
+                        <p class="uppercase">Senior Software Engineer</p>
+                        <p>Sep 2011 - Dec 2014</p>
+                    </div>
+                    <div class="col-wide job-description">
+
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">
+                            Helped create and maintain a highly scalable backend system to support
+                            Android and IOS mobile applications. Created MVC and WCF services to help automate order
+                            fulfillment for glasses.com.
+                        </p>
+
+                    </div>
+                </div>
+                <!-- end of Job Details block. -->
+
+                <!-- Job Details: copy this whole block to add more jobs -->
+                <divclass="job-history">
+                    <div class="col-narrow">
+                        <h3>Stampin'Up</h3>
+                        <p class="uppercase">Senior Software Engineer</p>
+                        <p>Sep 2005 - Sep 2011</p>
+                    </div>
+                    <div class="col-wide job-description">
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">
+                            Optimized Reports for 40,000+ end users. Worked on front and backend
+                            ecommerce websites. Created ETL pakages in SSIS for SQL Server. Wrote TSQL Stored Procedures
+                            for Reporting applications.
+                        </p>
+
+                    </div>
+            </div>
+            <!-- end of Job Details block. -->
+
+            </div>
+        </section>
+
+
+        <!-- // Education -->
+        <section id="education" class="education">
+            <div class="content-wrap">
+
+                <h2>Education</h2>
+                <!-- School details: copy this whole block to add more schools. -->
+                <h3>WeberState, Ogden Utah
+                </h3>
+                <p>B.S. Computer Science
+                    December 2003</p>
+
+                <!-- Add as many paragraphs as you need. -->
+
+                <!-- End of school details. -->
+
+                <h3>SKILLS</h3>
+                <p>AWS, AZURE, Rest, GraphQl, BDD, TDD, Deployment Automation, Observability, Performance Optimization, CICD tools, Chat-Ops</p>
+
+                <h3>LANGUAGES</h3>
+                <p>C#, SQL, Typescript, NodeJs, Java</p>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- // Footer & contact info -->
+    <footer id="contact">
+        <div class="content-wrap">
+            <h2>Let's Keep in Touch!</h2>
+            <!-- Social media and contact links. Add or remove any networks. -->
+            <div class="contact-info">
+                <a href="https://www.mh-resume.net" target="_blank"><i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+                    <span class="sr-only">Website</span></a>
+                <a href="mailto:megnmike@gmail.com"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+                    <span class="sr-only">Email</span></a>
+                <a href="https://twitter.com/MichaelHunting8" target="_blank"><i class="fa fa-twitter fa-lg"
+                        aria-hidden="true"></i>
+                    <span class="sr-only">Twitter</span></a>
+                <a href="https://www.linkedin.com/in/michael-hunting-07335413/" target="_blank"><i
+                        class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
+                    <span class="sr-only">LinkedIn</span></a>
+                <a href="https://github.com/mhunting" target="_blank"><i class="fa fa-github fa-lg"
+                        aria-hidden="true"></i>
+                    <span class="sr-only">Github</span></a>
+            </div>
+            <p>Copyright &copy; 2023 by Michael Hunting</p>
+        </div>
+    </footer>
+</body>
+
+</html>
