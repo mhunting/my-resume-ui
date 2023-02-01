@@ -44,6 +44,7 @@
         nav {
             z-index: 999;
         }
+
         .content-wrap {
             max-width: 950px;
             margin: 0 auto;
@@ -57,7 +58,7 @@
         }
 
         .justified {
-            text-align: justify;
+            text-align: left;
         }
 
         .btn {
@@ -66,7 +67,7 @@
             color: #fff;
             padding: 10px;
             display: inline-block;
-            cursor:pointer;
+            cursor: pointer;
         }
 
         .download {
@@ -85,7 +86,6 @@
         }
 
         /* Header styles  */
-
         header {
             padding-top: 50px;
             position: relative;
@@ -95,7 +95,7 @@
             text-align: center;
             background-color: #fff;
             position: fixed;
-            /* if you dont set a width for a positioned element, it will only be as wide as its content*/
+            /* if you don't set a width for a positioned element, it will only be as wide as its content*/
             top: 0;
             width: 100%;
             /*Can also be achieved by setting left: 0 and right:0 */
@@ -138,7 +138,7 @@
 ====================*/
         .education {
             background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
-                url(http://freelinkedinbackgrounds.com/wp-content/uploads/2015/01/Technology-008.jpg) no-repeat;
+                url(https://freelinkedinbackgrounds.com/wp-content/uploads/2015/01/Technology-008.jpg) no-repeat;
             background-size: cover;
             background-attachment: fixed;
         }
@@ -162,9 +162,9 @@
             margin-top: 20px;
         }
 
-        .job-decription {
+        .job-description {
             margin-bottom: 15px;
-          
+
         }
 
         .job-history {
@@ -172,7 +172,7 @@
             padding-top: 10px;
         }
 
-        /* Media Querie */
+        /* Media Query */
         @media (min-width: 900px) {
             .col-narrow {
                 width: 35%;
@@ -196,14 +196,19 @@
             }
         }
     </style>
-    
+    <script src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
+        integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://use.fontawesome.com/59a8f26532.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Michael Hunting | Resume</title>
     <link href="https://fonts.googleapis.com/css?family=Artifika|Open+Sans" rel="stylesheet">
- 
+
+
 </head>
 
 <body>
@@ -278,7 +283,7 @@
                     </div>
                 </div>
                 <!-- end of Job Details block. -->
-  
+
                 <!-- Job Details: copy this whole block to add more jobs -->
                 <div class="job-history">
                     <div class="col-narrow">
@@ -328,7 +333,8 @@
                         <!-- Add as many paragraphs as you need. -->
                         <p class="justified">
                             Optimized Reports for 40,000+ end users. Worked on front and backend
-                            ecommerce websites. Created ETL pakages in SSIS for SQL Server. Wrote TSQL Stored Procedures
+                            e-commerce websites. Created ETL packages in SSIS for SQL Server. Wrote TSQL Stored
+                            Procedures
                             for Reporting applications.
                         </p>
 
@@ -336,24 +342,25 @@
                 </div>
                 <!-- end of Job Details block. -->
 
-            
 
-             <!-- Job Details: copy this whole block to add more jobs -->
-             <div class="job-history">
-                <div class="col-narrow">
-                    <h3>SmartTalk Inc</h3>
-                    <p class="uppercase">Software Engineer</p>
-                    <p>Sep 2001 - Sep 2005</p>
-                </div>
-                <div class="col-wide job-description">
-                    <!-- Add as many paragraphs as you need. -->
-                    <p class="justified">
-                        QA automation and manual testing. Maintained a c, c++ telephony application for healthcare communications.
-                    </p>
 
+                <!-- Job Details: copy this whole block to add more jobs -->
+                <div class="job-history">
+                    <div class="col-narrow">
+                        <h3>SmartTalk Inc</h3>
+                        <p class="uppercase">Software Engineer</p>
+                        <p>Sep 2001 - Sep 2005</p>
+                    </div>
+                    <div class="col-wide job-description">
+                        <!-- Add as many paragraphs as you need. -->
+                        <p class="justified">
+                            QA automation and manual testing. Maintained a c, c++ telephony application for healthcare
+                            communications.
+                        </p>
+
+                    </div>
                 </div>
-        </div>
-        <!-- end of Job Details block. -->
+                <!-- end of Job Details block. -->
 
             </div>
         </section>
@@ -375,7 +382,8 @@
                 <!-- End of school details. -->
 
                 <h3>SKILLS</h3>
-                <p>AWS, AZURE, Rest, GraphQl, BDD, TDD, Deployment Automation, Observability, Performance Optimization, CICD tools, Chat-Ops</p>
+                <p>AWS, AZURE, Rest, GraphQl, BDD, TDD, Deployment Automation, Observability, Performance Optimization,
+                    CI/CD tools, Chat-Ops</p>
 
                 <h3>LANGUAGES</h3>
                 <p>C#, SQL, Typescript, NodeJs, Java</p>
@@ -405,8 +413,21 @@
                     <span class="sr-only">Github</span></a>
             </div>
             <p>Copyright &copy; 2023 by Michael Hunting</p>
+            <p>Visitor Count: <span id="vCount"></span></p>
         </div>
     </footer>
 </body>
+<script>
+    $(
+        async () => {
+
+            // Make a request for a user with a given ID
+            const response = await axios.get('https://o6w2l8vh4e.execute-api.us-east-1.amazonaws.com/Prod/hello');
+            $("#vCount").text(response.data.visitorCount);
+        }
+
+    );
+
+</script>
 
 </html>
